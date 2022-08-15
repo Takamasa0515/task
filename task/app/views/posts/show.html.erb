@@ -1,0 +1,38 @@
+<div class = "main_container" >
+
+  <h2>スケジュール詳細</h2>
+
+  <table>
+    <tr>
+      <th>タイトル</th>
+      <td><%= @post.title %></td>
+    </tr>
+    <tr>
+      <th>開始日</th>
+      <td><%= @post.post_start_at %></td></td>
+    </tr>
+    <tr>
+      <th>投稿日時</th>
+      <td><%= @post.created_at.to_s(:date_jp) %></td>
+    </tr>
+    <tr>
+      <th>終日</th>
+      <td>
+        <% if @post.allday == true %>
+        ◯
+        <% else @post.allday == false %>
+
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <th>スケジュールメモ</th>
+      <td><%= @post.memo %></td>
+    </tr>
+  </table>
+
+<div>
+  <ul>
+    <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+  </ul>
+</div>
