@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      post: スケジュール
+    attributes:
+      post:
+        title: タイトル
+        post_start_at: 開始日
+        post_end_at: 終了日
+        allday: 終日
+        memo: スケジュールメモ
